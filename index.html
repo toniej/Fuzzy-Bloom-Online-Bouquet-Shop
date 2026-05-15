@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuzzy & Bloom Online Bouquet Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header>
+    <nav>
+        <div class="logo">🌸 Fuzzy & Bloom</div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#cart">Add to Cart</a></li>
+                <li><a href="#customize">Customize & Contact</a></li>
+            </ul>
+
+        <div class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+        </div>
+        
+        <div class="burger-menu-btn">
+            <img src="images/burger.png" alt="Menu" onclick="toggleMenu()">
+        </div>
+    </nav>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <img src="images/close.png" alt="Close" class="close-btn"onclick="toggleMenu()">
+            
+            <ul class="mobile-links">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#products" onclick="toggleMenu()">Products</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About Us</a></li>
+                <li><a href="#cart" onclick="toggleMenu()">Add to Cart</a></li>
+                <li><a href="#customize" onclick="toggleMenu()">Customize & Contact</a></li>
+            </ul>
+        </div>
+
+</header>
+
+<!-- ================= HOME ================= -->
+
+<section class="home" id="home">
+            <img src="images/home picture.jpg" alt="Home Picture" class="home-picture">
+            <div class="overlay"></div>
+        
+        <div class="home-content">
+            <h1>Fuzzy & Bloom Online Bouquet Shop</h1>
+            <p>Handmade aesthetic bouquet designs made with love ✨</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products" id="products">
+    <h2>✨ Bloom Collection</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="images/tulips.jpg" alt="tulip">
+            <h3>Tulip</h3>
+            <p>₱499</p>
+
+            <div class="qty">
+                <button onclick="changeQty('q1',-1)">-</button>
+                <span id="q1">1</span>
+                <button onclick="changeQty('q1',1)">+</button>
+            </div>
+
+            <button onclick="addToCart('Tulip',499,'q1')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/sunflower.jpg" alt="sunflower">
+            <h3>Sunflower</h3>
+            <p>₱579</p>
+
+            <div class="qty">
+                <button onclick="changeQty('q2',-1)">-</button>
+                <span id="q2">1</span>
+                <button onclick="changeQty('q2',1)">+</button>
+            </div>
+
+            <button onclick="addToCart('Sunflower',579,'q2')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/lily.jpg" alt="lily">
+            <h3>Lily</h3>
+            <p>₱629</p>
+
+            <div class="qty">
+                <button onclick="changeQty('q3',-1)">-</button>
+                <span id="q3">1</span>
+                <button onclick="changeQty('q3',1)">+</button>
+            </div>
+
+            <button onclick="addToCart('Lily',629,'q3')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/rose.jpg" alt="rose">
+            <h3>Rose</h3>
+            <p>₱799</p>
+
+            <div class="qty">
+                <button onclick="changeQty('q4',-1)">-</button>
+                <span id="q4">1</span>
+                <button onclick="changeQty('q4',1)">+</button>
+            </div>
+
+            <button onclick="addToCart('Rose',799,'q4')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/daisy.jpg" alt="daisy">
+            <h3>Daisy</h3>
+            <p>₱399</p>
+
+            <div class="qty">
+                <button onclick="changeQty('q5',-1)">-</button>
+                <span id="q5">1</span>
+                <button onclick="changeQty('q5',1)">+</button>
+            </div>
+
+            <button onclick="addToCart('Daisy',399,'q5')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/gerbera.jpg" alt="gerbera">
+            <h3>Gerbera</h3>
+            <p>₱699</p>
+
+            <div class="qty">
+                <button onclick="changeQty('q6',-1)">-</button>
+                <span id="q6">1</span>
+                <button onclick="changeQty('q6',1)">+</button>
+            </div>
+
+            <button onclick="addToCart('Gerbera',699,'q6')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/stargazer.jpg" alt="stargazer">
+            <h3>Stargazer</h3>
+            <p>₱999</p>
+
+            <div class="qty">
+                <button onclick="changeQty('q7',-1)">-</button>
+                <span id="q7">1</span>
+                <button onclick="changeQty('q7',1)">+</button>
+            </div>
+
+            <button onclick="addToCart('Stargazer',999,'q7')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/giant lotus.jpg" alt="giant lotus">
+            <h3>Giant Lotus</h3>
+            <p>₱1699</p>
+
+            <div class="qty">
+                <button onclick="changeQty('q8',-1)">-</button>
+                <span id="q8">1</span>
+                <button onclick="changeQty('q8',1)">+</button>
+            </div>
+
+            <button onclick="addToCart('Giant Lotus',1699,'q8')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/giant sunflower.jpg" alt="giant sunflower">
+            <h3>Giant Sunflower</h3>
+            <p>₱1399</p>
+
+            <div class="qty">
+                <button onclick="changeQty('q9',-1)">-</button>
+                <span id="q9">1</span>
+                <button onclick="changeQty('q9',1)">+</button>
+            </div>
+
+            <button onclick="addToCart('Giant Sunflower',1399,'q9')">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="images/giant rose.jpg" alt="giant rose">
+            <h3>Giant Rose</h3>
+            <p>₱1199</p>
+
+            <div class="qty">
+                <button onclick="changeQty('q10',-1)">-</button>
+                <span id="q10">1</span>
+                <button onclick="changeQty('q10',1)">+</button>
+            </div>
+
+            <button onclick="addToCart('Giant Rose',1199,'q10')">Add to Cart</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about">
+
+    <h2>About Us</h2>
+
+    <p>
+        Fuzzy & Bloom is a handmade bouquet shop that creates aesthetic
+        fuzzy wire flowers for gifts, surprises, and special occasions.
+    </p>
+
+</section>
+
+<!-- ================= CART ================= -->
+
+<section class="cart" id="cart">
+
+    <h2>🛒 Cart Summary</h2>
+
+    <div id="cart-items">No items yet</div>
+
+    <h3>Total: ₱<span id="total">0</span></h3>
+
+    <!-- CHECKOUT BOX INSIDE CART (FIXED STRUCTURE) -->
+    <div class="checkout-box">
+
+        <h3>Checkout Payment</h3>
+
+        <select id="paymentMethod">
+            <option>GCash</option>
+            <option>Maya</option>
+            <option>Cash on Delivery</option>
+            <option>Bank Transfer</option>
+        </select>
+
+        <button onclick="checkoutOrder()">Place Order</button>
+
+    </div>
+
+</section>
+
+<!-- ================= CUSTOM ORDERS ================= -->
+
+<section class="customize" id="customize">
+
+    <h2>💌 Custom Orders</h2>
+
+    <div class="customize-box">
+
+        <form onsubmit="customOrder(event)">
+
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+
+            <textarea placeholder="Describe your bouquet idea..." required></textarea>
+
+            <select required>
+                <option>GCash</option>
+                <option>Maya</option>
+                <option>Cash</option>
+            </select>
+
+            <button type="submit">Send Order</button>
+
+        </form>
+
+        <div class="connect">
+
+            <h3>Connect With Us</h3> <br>
+
+            <p>📘 Facebook: Fuzzy & Bloom</p> <br>
+            <p>📸 Instagram: @fuzzyandbloom</p> <br>
+            <p>🎵 TikTok: @fuzzyandbloom</p> <br>
+            <p>📞 0912-345-6789</p> <br>
+            <p>📍 Taguig City</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+    <p>© 2026 Fuzzy & Bloom | Handmade with love 🌸</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
